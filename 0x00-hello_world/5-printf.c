@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
  *
- * Description: main - Prints out a string to stdout.
+ * main - Prints "with proper grammar, but the outcome is a piece of art,
  *
- * Return: 0 Always success.
+ * Return: Always 0
  *
  */
 int main(void)
