@@ -2,9 +2,8 @@
 #include <ctype.h>
 
 /**
- * main - program that prints the alphabet in lowercase, followed by a new line
+ * main - Entry point
  *
- * You can only use the putchar
  * Return: Always 0 (Success)
  */
 int main(void)
