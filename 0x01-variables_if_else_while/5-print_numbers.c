@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -10,10 +11,10 @@ int main(void)
 	while (m < 10)
 	{
 	printf("%d \n", m);
-	m += 1;
+	m++;
 	}
 
-	printf('\n');
+	printf("\n");
 
 	return (0);
 }
