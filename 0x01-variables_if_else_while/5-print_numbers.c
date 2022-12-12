@@ -7,7 +7,7 @@ int main(void)
 {
 	int m = 0;
 
-	while (n < 10)
+	while (m < 10)
 	{
 	putchar("%d \n", m);
 	m += 1;
