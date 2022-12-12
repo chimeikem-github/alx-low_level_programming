@@ -6,12 +6,11 @@
  * Return: 0
  */
 int main(void)
-{
-	char l = 'a';
+{char l = 'a';
 
-	while (l <= 'z')
-	putchar(l);
-	l += 1;
-	putchar('\n');
-	return (0);
+while (l <= 'z')
+putchar(l);
+l += 1;
+putchar('\n');
+return (0);
 }
