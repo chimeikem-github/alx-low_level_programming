@@ -15,7 +15,7 @@ if (u != 57)
 	putchar(p);
 	putchar(32);
 }
-n++;
+u++;
 }
 putchar('\n');
 return (0);
