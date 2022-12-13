@@ -11,13 +11,13 @@ int main(void)
 
 	while (d1 <= 57)
 	{
-	n2 = 48;
-	if (n2 <= 57)
+	d2 = 48;
+	if (d2 <= 57)
 	{
 	putchar(d1);
 	putchar(d2);
 
-	if (d1 != 57 || n2 != 57)
+	if (d1 != 57 || d2 != 57)
 	{
 	putchar(d3);
 	putchar(32);
