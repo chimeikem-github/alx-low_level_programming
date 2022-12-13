@@ -5,12 +5,10 @@
  */
 int main(void)
 {
-char *z[] = "main";
-int m;
-m = 0;
-while (m <= 8)
+char *sum = "main";
+while (*sum)
 {
-	_putchar(*z[m]);
+	_putchar(*sum);
 	m++;
 }
 _putchar('\n');
