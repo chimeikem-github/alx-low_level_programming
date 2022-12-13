@@ -19,8 +19,8 @@ int main(void)
 
 	if (d1 != 57 || d2 != 57)
 	{
-	putchar(';');
-	putchar(' ');
+	putchar(';', d3);
+	putchar('32 ');
 	}
 	d2++;
 	}
