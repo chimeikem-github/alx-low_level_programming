@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <main.h>
 /**
  * main -E ntry point
  * Return: Always 0 (Success)
