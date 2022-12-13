@@ -10,5 +10,4 @@ for (m = 'a'; m <= 'z'; m++)
 {
 	_putchar(m);
 }
-return (0);
 }
