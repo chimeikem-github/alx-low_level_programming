@@ -5,12 +5,12 @@
  */
 int main(void)
 {
-char z[] = "main";
+char *z[] = "main";
 int m;
 m = 0;
 while (m <= 8)
 {
-	_putchar(z[m]);
+	_putchar(*z[m]);
 	m++;
 }
 _putchar('\n');
