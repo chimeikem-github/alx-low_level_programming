@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-char *sum = "main";
+char *sum = "_putchar";
 while (*sum)
 {
 	_putchar(*sum);
