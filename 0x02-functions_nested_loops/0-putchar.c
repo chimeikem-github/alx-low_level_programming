@@ -9,7 +9,7 @@ char *sum = "main";
 while (*sum)
 {
 	_putchar(*sum);
-	m++;
+	sum++;
 }
 _putchar('\n');
 return (0);
