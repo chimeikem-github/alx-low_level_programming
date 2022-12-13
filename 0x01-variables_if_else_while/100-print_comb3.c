@@ -5,28 +5,21 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{int d1 = 48;
-	int d2 = 48;
-	int d3 = 44;
-
-	while (d1 <= 57)
-	{
-	d2 = 48;
-	if (d2 <= 57)
-	{
-	putchar(d1);
-	putchar(d2);
-
-	if (d1 != 57 || d2 != 57)
-	{
-	putchar(d3);
-	putchar(32);
-	}
-	d2++;
-	}
-	d1++;
-	}
-	putchar('\n');
-
-	return (0);
+{
+	 for (int i = 0; i < 10; i++)
+	 {
+		 for (int j = 0; j < 10; j++)
+		 {
+		 if (i == j)
+		 {continue;
+		 
+		 }
+		 putchar(i + '0');
+		 putchar(',');
+		 putchar(' ');
+		 putchar(j + '0');
+		 putchar('\n');
+	 }
+ }
+ return (0);
 }
