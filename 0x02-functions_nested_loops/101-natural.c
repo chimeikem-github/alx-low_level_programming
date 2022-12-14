@@ -15,7 +15,7 @@ int main(void)
 	if ((i % 3) == 0 || (i % 5) == 0)
 		sum++;
 	}
-	printf(stderr "%d\n", sum);
+	printf("%d\n", stderr, sum);
 
 	return (0);
 }
