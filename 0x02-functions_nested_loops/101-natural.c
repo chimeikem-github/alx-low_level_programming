@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
 /**
  * main - Entry point
  *
@@ -15,7 +13,7 @@ int main(void)
 	if ((i % 3) == 0 || (i % 5) == 0)
 		sum++;
 	}
-	printf("%d\n", stderr, sum);
+	printf("%d\n", sum);
 
 	return (0);
 }
