@@ -1,30 +1,49 @@
 #include "main.h"
-/**
- * print_triangle - a function that prints a triangle
- * @size: size of the triangle
- * Return: triangle of '#'s
- */
-void print_triangle(int size)
-{
-	int sp, ro, tr;
 
-	if (size <= 0)
+/**
+ * print_number - prints an integer
+ * @n: random integer
+ *Return: void
+ **/
+
+void print_number(int n)
+{
+	char ld, cr;
+	int r;
+	int ct = 0;
+
+	if (n < 0)
 	{
-		_putchar('\n');
+		_putchar ('-');
+		ld = (char)('0' - (n % 10));
+		n = n / -10;
 	}
-	else
-	{
-		for (ro = 0; ro <= (size - 1); ro++)
+
+		else
 		{
-			for (sp = 0; sp < (size - 1) - ro; sp++)
-			{
-				_putchar(' ');
-			}
-			for (tr = 0; tr <= ro; tr++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
-		}
+			ld = (char)((n % 10) + '0');
+		n = n / 10;
 	}
+
+	r = 0;
+	while (n > 0)
+	{
+		r = r * 10 + (n % 10);
+		n = n / 10;
+		ct++;
+	}
+
+	while (r > 0)
+	{
+		cr = (char)((r % 10) + '0');
+		_putchar(cr);
+		r = r / 10;
+		ct--;
+	}
+	while (ct != 0)
+	{
+		_putchar('0');
+			ct--;
+	}
+	_putchar(ld);
 }
