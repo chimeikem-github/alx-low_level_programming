@@ -5,28 +5,24 @@
 *@n: parameter
 *Return: returns nothing
 */
-
-void print_diagonal(int n)
+void print_square(int size)
 {
-	int len, space;
+	int co, ro;
 
-	if (n > 0)
+	if (size <= 0)
 	{
-		for (len = 0; len < n; len++)
+		_putchar('\n');
+	}
+	else
+	{
+		for (co = 1; co <= size; co++)
 		{
-			for (space = 0; space < len; space++)
+			_putchar('#');
+			for (ro = 2; ro <= size; ro++)
 			{
-				_putchar(' ');
-			}
-
-			_putchar('\\');
-
-			if (len == (n - 1))
-			{
-				continue;
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
