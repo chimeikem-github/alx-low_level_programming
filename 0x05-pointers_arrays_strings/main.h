@@ -13,7 +13,6 @@ void puts2(char *str);
 void puts_half(char *str);
 int void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
-int mul(int, int);
 
 #endif /* MAIN_H */
 
