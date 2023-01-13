@@ -1,50 +1,54 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
-  *argstostr - concatenates all arguments of the program.
-  *@ac: argument count.
-  *@av: pointer to array of size ac.
-  *Return: NULL if ac == 0 or av == null, Pointer to new string.
-  *NULL on fail.
-  */
-char *argstostr(int ac, char **av)
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
+ */
+void simple_print_buffer(char *buffer, unsigned int size)
 {
-	int i, j, k, size;
-	char *arg;
+    unsigned int i;
 
-	size = 0;
-	k = 0;
-	if (ac == 0 || av == NULL)
-		return (NULL);
-	i = 0;
-	while (i < ac)
-	{
-		j = 0;
-		while (av[i][j])
-		{
-			size++;
-			j++;
-		}
-		size++;
-		i++;
-	}
-	arg = malloc((sizeof(char) * size) + 1);
-	if (arg == NULL)
-		return (NULL);
-	i = 0;
-	while (i < ac)
-	{
-		j = 0;
-		while (av[i][j])
-		{
-			arg[k] = av[i][j];
-			j++;
-			k++;
-		}
-		arg[k] = '\n';
-		k++;
-		i++;
-	}
-	arg[k] = '\0';
-	return (arg);
+    i = 0;
+    while (i < size)
+    {
+        if (i % 10)
+        {
+            printf(" ");
+        }
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", buffer[i]);
+        i++;
+    }
+    printf("\n");
+}
+
+/**
+ * main - check the code for
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *p;
+    int i;
+
+    p = malloc(sizeof(char) * 10);
+    p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+    i = 0;
+    while (i < 98)
+    {
+        p[i++] = 98;
+    }
+    simple_print_buffer(p, 98);
+    free(p);
+    return (0);
 }
