@@ -1,52 +1,37 @@
-#include <stdio.h>
-#include "function_pointers.h"
-
+#include<stdio.h>
+#include<stdlib.h>
 /**
- * print_name_as_is - prints a name as is
- * @name: name of the person
- *
- * Return: Nothing.
- */
-void print_name_as_is(char *name)
+ * main- Entry point
+(* a blank line
+ *@argc: the number of parameters.
+ *@argv: the parameeters in the case the number ob bytes.
+* Description: this program prints opcodes in hexa)?
+* Return: 0 in succes
+*/
+int main(int argc, char *argv[])
 {
-    printf("Hello, my name is %s\n", name);
-}
+	int i, n;
 
-/**
- * print_name_uppercase - print a name in uppercase
- * @name: name of the person
- *
- * Return: Nothing.
- */
-void print_name_uppercase(char *name)
-{
-    unsigned int i;
 
-    printf("Hello, my uppercase name is ");
-    i = 0;
-    while (name[i])
-    {
-        if (name[i] >= 'a' && name[i] <= 'z')
-        {
-            putchar(name[i] + 'A' - 'a');
-        }
-        else
-        {
-            putchar(name[i]);
-        }
-        i++;
-    }
-}
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	n = atoi(argv[1]);
+	if (n < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
 
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    print_name("Danton", print_name_as_is);
-    print_name("Rick Harris", print_name_uppercase);
-    printf("\n");
-    return (0);
+	for (i = 0; i < n; i++)
+	{
+		printf("%02hhx", *((char *)main + i));
+		if (i < n - 1)
+			printf(" ");
+		else
+			printf("\n");
+	}
+	return (0);
 }
